@@ -99,4 +99,21 @@ stepsTotal(arrays);
 
 
 
+const message = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
 
+function decode(words){
+    words = words.split(' '); // ['noggin','oreo',....]
+    words.unshift(''); // ['','noggin','oreo',....]
+    let total = '';
+    //(acc,val)=> val.length ===3 ? acc+' ' : acc+ val[val.length-1].toUpperCase()
+    words.reduce(function(acc,val){
+        if (val.length === 3){
+            total += ' ';
+        }else{
+            total += val[val.length - 1].toUpperCase();
+        }
+    });
+    return total;
+}
+
+console.log(decode(message));
