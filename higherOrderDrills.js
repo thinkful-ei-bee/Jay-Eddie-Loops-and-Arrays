@@ -23,7 +23,7 @@ repeat(goodBye,5);
 function filter(arr, fn) {
     let newArray = [];
     for (let i=0; i < arr.length; i++ ){
-        if (fn(arr[i]) {
+        if (fn(arr[i])) {
             newArray.push(arr[i]);
         }
     }
